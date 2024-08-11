@@ -2,7 +2,7 @@ import React from "react";
 
 const About = () => {
   return (
-    <div className="p-8  bg-gray-900 text-white h-screen overflow-y-auto">
+    <div className="p-8  bg-gray-900 text-white h-screen overflow-y-auto pt-16 lg:pt-8">
       <h1 className="text-4xl font-bold mb-4">About Me</h1>
       <p className="text-lg p-4 rounded text-gray-400 bg-gray-800">
         I am a dedicated and passionate web developer with a strong foundation
@@ -12,7 +12,7 @@ const About = () => {
         formative experiences paved the way for my current role at Squbix
         Digital, where I work as a Software Developer.
       </p>
-      <p className="text-lg p-4 rounded text-gray-400 bg-gray-800">
+      <p className="text-lg p-4 rounded text-gray-400 bg-gray-800 mt-4">
         Since joining Squbix Digital in January, I have been instrumental in
         crafting responsive and user-centric applications using React and React
         Native. My proficiency in JavaScript enables me to develop dynamic
