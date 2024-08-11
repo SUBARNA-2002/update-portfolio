@@ -1,7 +1,8 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { IoCloseOutline } from "react-icons/io5";
 
-const LeftSideBar = () => {
+const LeftSideBar = ({ setLeftSideBarVisible }) => {
   const navigate = useNavigate();
   const navigationData = [
     {
@@ -30,10 +31,19 @@ const LeftSideBar = () => {
     },
   ];
   return (
-    <div className="h-screen w-screen bg-gray-800 text-white flex flex-col justify-between">
+    <div className="h-screen lg:w-screen w-64 bg-gray-800 text-white flex flex-col justify-between">
       <div className="p-6 overflow-y-auto">
         <div className="mb-8">
-          <h1 className="text-3xl font-bold">Logo</h1>
+          <div className="flex justify-between">
+            <h1 className="text-3xl font-bold">Logo</h1>
+            <div
+              className="lg:hidden block"
+              onClick={() => setLeftSideBarVisible(false)}
+            >
+              <IoCloseOutline color="white" size={35} />
+
+            </div>
+          </div>
           <img
             src="your-logo-url"
             alt="Logo"
@@ -48,7 +58,10 @@ const LeftSideBar = () => {
           {navigationData?.map((item, index) => {
             return (
               <li
-                onClick={() => navigate(item?.path)}
+                onClick={() => {
+                  navigate(item?.path);
+                  setLeftSideBarVisible(false);
+                }}
                 key={index}
                 className="hover:bg-gray-700 p-2 rounded-md cursor-pointer"
               >
