@@ -55,7 +55,7 @@ const LeftSideBar = ({ setLeftSideBarVisible }) => {
           </div>
         </div>
         <hr className="border-gray-600" />
-        <ul className="mt-6 space-y-4">
+        <ul className="mt-6 space-y-2">
           {navigationData?.map((item, index) => {
             const isActive = location.pathname === item.path;
             return (
